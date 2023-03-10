@@ -57,11 +57,11 @@ public class CustomListTest {
     @Test
     void testcountCities(){
         list = MockCityList();
-        assertEquals(1, list.getCount());
+        assertEquals(0, list.getCount());
         City city = new City("Regina", "Saskatchewan");
         list.addCity(city);
-        assertEquals(2, list.getCount());
-        list.deleteCity(city);
         assertEquals(1, list.getCount());
+        list.deleteCity(city);
+        assertEquals(0, list.getCount());
     }
 }
